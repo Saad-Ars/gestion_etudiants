@@ -66,6 +66,11 @@ if (localStorage.getItem('dark') === '1') {
     document.getElementById('icon-dark').classList.replace('fa-moon', 'fa-sun');
 }
 </script>
+<script>
+window.addEventListener('load', function() {
+    document.getElementById('spinner').style.display = 'none';
+});
+</script>
 <body>
     <div class="layout">
         <?php include 'navbar.php'; ?>
@@ -140,5 +145,7 @@ if (localStorage.getItem('dark') === '1') {
         </div>
     </div>
 </body>
-
+<div id="spinner">
+    <div class="spinner-cercle"></div>
+</div>
 </html>

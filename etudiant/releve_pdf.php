@@ -46,7 +46,10 @@ $pdf->SetMargins(20, 20, 20);
 $pdf->AddPage();
 
 // Logo + En-tête
-$pdf->Image('../assets/img/bts.png', 20, 15, 25);
+$pdf->SetFont('helvetica', 'B', 18);
+$pdf->SetTextColor(37, 99, 235);
+$pdf->Cell(0, 10, 'GestEtud', 0, 1, 'L');
+$pdf->SetTextColor(0, 0, 0);
 $pdf->SetFont('helvetica', 'B', 16);
 $pdf->SetXY(50, 15);
 $pdf->Cell(0, 8, 'GestEtud - Relevé de notes', 0, 1, 'L');

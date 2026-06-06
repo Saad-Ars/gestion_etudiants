@@ -79,10 +79,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="login-page">
         <div class="login-box">
             <div class="login-logo">
-    <img src="http://localhost:8000/assets/img/bts.png" 
-         style="height:100px; width:auto; object-fit:contain; margin-bottom:12px;">
-    <div class="app-sub">Système de gestion des étudiants Saad-Younes</div>
-</div>
+                <img src="http://localhost:8000/assets/img/bts.png"
+                    style="height:100px; width:auto; object-fit:contain; margin-bottom:12px;">
+                <div class="app-sub">Système de gestion des étudiants Saad-Younes</div>
+            </div>
             <h2>Connectez-vous</h2>
 
             <?php if ($erreur != ""): ?>
@@ -101,12 +101,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <button type="submit" class="btn-login">
                     <i class="fas fa-sign-in-alt"></i> Se connecter
                 </button>
+                <div style="text-align:center; margin-top:14px;">
+                    <a href="mot_de_passe_oublie.php" style="color:#2563eb; font-size:13px;">
+                        <i class="fas fa-lock"></i> Mot de passe oublié ?
+                    </a>
+                </div>
 
-         
+
             </form>
         </div>
     </div>
-</body>       <footer class="page-footer">
+</body>
+<footer class="page-footer">
     Réalisé par : <strong>Saad et Younes</strong><br>
     Encadré par : <strong>M. El Merrouchi</strong>
 </footer>
