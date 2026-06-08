@@ -72,7 +72,7 @@ window.addEventListener('load', function() {
                     <button class="btn-dark-toggle" onclick="toggleDark()" title="Mode sombre">
                         <i class="fas fa-moon" id="icon-dark"></i>
                     </button>
-                    <img src="http://localhost:8000/assets/img/admin.png"
+                    <img src="http://localhost:8000/assets/img/professeur.png"
                         style="width:38px; height:38px; border-radius:50%; object-fit:cover; border:2px solid #e2e8f0;">
                     <span><?php echo $_SESSION['prenom'] . ' ' . $_SESSION['nom']; ?></span>
                 </div>

@@ -35,29 +35,30 @@ $initiale = strtoupper(substr($_SESSION['prenom'], 0, 1) . substr($_SESSION['nom
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <script>
-function toggleDark() {
-    document.body.classList.toggle('dark');
-    const icon = document.getElementById('icon-dark');
-    if (document.body.classList.contains('dark')) {
-        icon.classList.replace('fa-moon', 'fa-sun');
-        localStorage.setItem('dark', '1');
-    } else {
-        icon.classList.replace('fa-sun', 'fa-moon');
-        localStorage.setItem('dark', '0');
+    function toggleDark() {
+        document.body.classList.toggle('dark');
+        const icon = document.getElementById('icon-dark');
+        if (document.body.classList.contains('dark')) {
+            icon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('dark', '1');
+        } else {
+            icon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('dark', '0');
+        }
     }
-}
 
-// Appliquer au chargement
-if (localStorage.getItem('dark') === '1') {
-    document.body.classList.add('dark');
-    document.getElementById('icon-dark').classList.replace('fa-moon', 'fa-sun');
-}
+    // Appliquer au chargement
+    if (localStorage.getItem('dark') === '1') {
+        document.body.classList.add('dark');
+        document.getElementById('icon-dark').classList.replace('fa-moon', 'fa-sun');
+    }
 </script>
 <script>
-window.addEventListener('load', function() {
-    document.getElementById('spinner').style.display = 'none';
-});
+    window.addEventListener('load', function() {
+        document.getElementById('spinner').style.display = 'none';
+    });
 </script>
+
 <body>
     <div class="layout">
         <?php include 'navbar.php'; ?>
@@ -98,11 +99,11 @@ window.addEventListener('load', function() {
                         </div>
                         <div class="form-groupe">
                             <label>Email</label>
-                            <input type="email" name="email" required>
+                            <input type="email" name="email" placeholder="exemple@school.ma" required>
                         </div>
                         <div class="form-groupe">
                             <label>Mot de passe</label>
-                            <input type="password" name="mot_de_passe" required>
+                            <input type="password" name="mot_de_passe" placeholder="••••••••" required>
                         </div>
                         <div class="form-groupe">
                             <label>Téléphone</label>
@@ -125,4 +126,5 @@ window.addEventListener('load', function() {
 <div id="spinner">
     <div class="spinner-cercle"></div>
 </div>
+
 </html>
